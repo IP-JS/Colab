@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+  <title>Add numbers</title>
+  <style>
+      #x{
+          border-style: groove;
+          border-color:gainsboro;
+          width: 150px;
+          height: 50px;
+          font-weight: bold;
+        font-size: 50px;
+      }
+      #y{
+          border-style: groove;
+          border-color: gainsboro;
+          width: 150px;
+          height: 50px;
+          font-weight: bold;
+        font-size: 50px;
+      }
+      #result{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        font-size: 50px;
+        color: red;
+      }
+      #go{
+        border-style: groove;
+        border-color: gainsboro;
+        height: 50px;
+        width: 50px;
+      }
+      .r{
+          font-family: arial;
+      }
+  </style>
+
+</head>
+<body>
+<h1 class="r">ADDITION</h1>
+<input id="x">
+<button id="go">+</button>
+<br>
+<input id="y">
+
+<div id="result">0</div>
+
+
+
+</body>
+<script>
+    "use strict";
+
+function add() {
+    var x = Number(document.getElementById('x').value);
+    var y = Number(document.getElementById('y').value);
+
+    document.getElementById('result').innerHTML = x+y;
+    return false;
+}
+
+document.getElementById('go').addEventListener('click', add);
+</script>
+</html>
